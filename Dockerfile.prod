@@ -3,6 +3,8 @@ FROM golang
 
 RUN apt-get update && apt-get install -y libxml2-dev xmlsec1 libxslt1-dev libxmlsec1-dev libxmlsec1-openssl
 
+RUN go clean -modcache
+
 RUN mkdir -p /go/src/github.com/gorilla/mux && \
     mkdir -p /go/certs && \
     git clone https://github.com/gorilla/mux.git /go/src/github.com/gorilla/mux/
