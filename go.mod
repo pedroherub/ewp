@@ -1,3 +1,3 @@
-module github.com/ewp/ewp-rest
+module github.com/pedroherub/ewp
 
 go 1.15

@@ -15,11 +15,11 @@ RUN go get -u github.com/levigross/grequests && \
     go get github.com/lestrrat/go-xmlsec && \
     go get -u github.com/go-sql-driver/mysql
 
-RUN mkdir -p /go/src/github.com/ewp/ewp-rest
+RUN mkdir -p /go/src/github.com/pedroherub/ewp
 
 ADD .env /etc/environment
 ADD entrypoint.prod.sh /root/entrypoint.prod.sh
 
-ADD . /go/src/github.com/ewp/ewp-rest/
+ADD . /go/src/github.com/pedroherub/ewp/
 
-RUN go install github.com/ewp/ewp-rest@latest
+RUN go install github.com/pedroherub/ewp@latest
