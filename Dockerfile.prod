@@ -19,7 +19,7 @@ RUN go get -u github.com/levigross/grequests && \
 
 RUN mkdir -p /go/src/github.com/pedroherub/ewp
 
-ADD .env /etc/environment
+# ADD .env /etc/environment
 ADD entrypoint.prod.sh /root/entrypoint.prod.sh
 
 ADD . /go/src/github.com/pedroherub/ewp/

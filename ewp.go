@@ -52,7 +52,7 @@ var PubAll = "/go/certs/" + os.Getenv("EWP_CERT_CHAINALL")
 
 func main() {
 
-	logPath := os.Getenv("EWP_DATA") + os.Getenv("EWP_LOGFILE_SERVER")
+	logPath := "/data/" + os.Getenv("EWP_LOGFILE_SERVER")
 
 	lf, err := os.OpenFile(logPath, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0640)
 
